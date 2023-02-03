@@ -1,0 +1,254 @@
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  color: white;
+  src: url('./ZonaPro-Regular.otf');
+}
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  src: url('./ZonaPro-Bold.otf');
+}
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  font-weight: 1000;
+  color: white;
+  src: url('./ZonaPro-ExtraBold.otf');
+}
+
+@keyframes fadeInCenter{
+  0% {opacity:0}
+  70% {opacity:0}
+  100% {opacity:1}
+}
+
+@keyframes fadeInRight{
+  0% {opacity:0}
+  70% {opacity:0; transform: translateX(50px)}
+  100% {opacity:1; transform: translateX(0)}
+}
+
+@keyframes fadeInLeft{
+  0% {opacity:0}
+  70% {opacity:0; transform: translateX(-50px)}
+  100% {opacity:1; transform: translateX(0)}
+}
+
+@keyframes fadeInBottomLogo{
+  0% {opacity:0}
+  70% {opacity:0; transform: translateY(50px)}
+  100% {opacity:1; transform: translateX(0)}
+}
+
+@keyframes fadeInBottomText{
+  0% {opacity:0;}
+  70% {opacity:0; transform: translateY(50px) rotate(180deg)}
+  100% {opacity:1; transform: translateY(0px) rotate(180deg)}
+}
+
+@keyframes fadeInTop{
+  0% {opacity:0}
+  70% {opacity:0; transform: translateY(-50px)}
+  100% {opacity:1; transform: translateX(0)}
+}
+
+.AnimLeft{
+  animation: fadeInLeft 3s ease-in-out;
+}
+
+.AnimRight{
+  animation: fadeInRight 3s ease-in-out;
+}
+
+.AnimTop{
+  animation: fadeInTop 3.5s ease-in-out;
+}
+
+.AnimBottomLogo{
+  animation: fadeInBottomLogo 3.5s ease-in-out;
+}
+
+.AnimBottomText{
+  animation: fadeInBottomText 3.5s ease-in-out;
+}
+
+.AnimCenter{
+  animation: fadeInCenter 3s ease-in-out;
+}
+
+#TeamStatslPNG{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width: 1920px;
+  height: 1080px;
+}
+
+#TeamStatsrPNG{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width: 1920px;
+  height: 1080px;
+}
+
+#TeamStatscPNG{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width: 1920px;
+  height: 1080px;
+}
+
+.TeamBlueStats{
+  font-family: Zona Pro;
+  color: white;
+  position: absolute;
+  left: 530px;
+  width: 100px;
+  font-size: 34px;
+  /* outline: solid coral; */
+  text-align: center;
+}
+
+.TeamBlueStats2{
+  font-family: Zona Pro;
+  color: white;
+  position: absolute;
+  left: 392px;
+  width: 300px;
+  font-size: 34px;
+  /* outline: solid coral; */
+  text-align: center;
+}
+
+#TeamBlueGoalsPerGame{
+  top: 288px;
+}
+
+#TeamBlueShotsPerGame{
+  top: 397px;
+}
+
+#TeamBlueAssistsPerGame{
+  top: 504px;
+}
+
+#TeamBlueSavesPerGame{
+  top: 613px;
+}
+
+#TeamBlueShotPerc{
+  top: 722px;
+}
+
+#TeamBlueAvgSpeed{
+  top: 831px;
+}
+
+#TeamBlueTeamname{
+  font-family: Zona Pro;
+  font-weight: 1000;
+  color: white;
+  text-transform: uppercase;
+  transform: rotate(180deg);
+  writing-mode: tb-rl;
+  font-size: 60px;
+  position:absolute;
+  left: 240px;
+  bottom: 165px;
+  height: 580px;
+  max-width:70px;
+  /* outline: solid coral; */
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#TeamBlueLogoLink{
+  position: absolute;
+  max-width: 120px;
+  max-height: 120px;
+  right: 1615px;
+  top: 200px;
+  /* outline: solid coral; */
+}
+
+.TeamOrangeStats{
+  font-family: Zona Pro;
+  color: white;
+  position: absolute;
+  right: 453px;
+  width: 100px;
+  font-size: 34px;
+  /* outline: solid coral; */
+  text-align: center;
+}
+
+.TeamOrangeStats2{
+  font-family: Zona Pro;
+  color: white;
+  position: absolute;
+  right: 390px;
+  width: 300px;
+  font-size: 34px;
+  /* outline: solid coral; */
+  text-align: center;
+}
+
+#TeamOrangeGoalsPerGame{
+  top: 288px;
+}
+
+#TeamOrangeShotsPerGame{
+  top: 397px;
+}
+
+#TeamOrangeAssistsPerGame{
+  top: 504px;
+}
+
+#TeamOrangeSavesPerGame{
+  top: 613px;
+}
+
+#TeamOrangeShotPerc{
+  top: 722px;
+}
+
+#TeamOrangeAvgSpeed{
+  top: 831px;
+}
+
+#TeamOrangeTeamname{
+  font-family: Zona Pro;
+  font-weight: 1000;
+  color: white;
+  text-transform: uppercase;
+  transform: rotate(deg);
+  writing-mode: vertical-lr;
+  font-size: 60px;
+  position:absolute;
+  right: 240px;
+  top: 200px;
+  height: 580px;
+  max-width:70px;
+  /* outline: solid coral; */
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#TeamOrangeLogoLink{
+  position: absolute;
+  max-width: 120px;
+  max-height: 120px;
+  left: 1615px;
+  bottom: 165px;
+  /* outline: solid coral; */
+}

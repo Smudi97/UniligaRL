@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>RL Team Stats</title>
+    <link rel="stylesheet" href="./TeamStatsStyle.css">
+
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; ">
+  <img class="AnimLeft" id="TeamStatslPNG">
+  <img class="AnimRight" id="TeamStatsrPNG">
+  <img class="AnimCenter" id="TeamStatscPNG">
+    <table class="AnimLeft">
+      <tr>
+        <td class= "TeamBlueStats" id="TeamBlueGoalsPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamBlueStats" id="TeamBlueShotsPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamBlueStats" id="TeamBlueAssistsPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamBlueStats" id="TeamBlueSavesPerGame"></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td class= "TeamBlueStats2 AnimLeft" id="TeamBlueShotPerc"></td>
+      </tr>
+      <tr>
+        <td class= "TeamBlueStats2 AnimLeft" id="TeamBlueAvgSpeed"></td>
+      </tr>
+    </table>
+    <div>
+      <span class="TeamBlue AnimBottomText" id="TeamBlueTeamname"></span>
+    </div>
+    <img class="AnimBottomLogo" id="TeamBlueLogoLink">
+    <table>
+      <tr>
+        <td class= "TeamOrangeStats AnimRight" id="TeamOrangeGoalsPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamOrangeStats AnimRight" id="TeamOrangeShotsPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamOrangeStats AnimRight" id="TeamOrangeAssistsPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamOrangeStats AnimRight" id="TeamOrangeSavesPerGame"></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td class= "TeamOrangeStats2 AnimRight" id="TeamOrangeShotPerc"></td>
+      </tr>
+      <tr>
+        <td class= "TeamOrangeStats2 AnimRight" id="TeamOrangeAvgSpeed"></td>
+      </tr>
+    </table>
+    <div>
+      <span class="TeamOrange AnimTop" id="TeamOrangeTeamname"></span>
+    </div>
+    <img class="AnimTop" id="TeamOrangeLogoLink">
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="./Updater.js"></script>
+    <script src="./regex-operation.js"></script>
+    <script>
+        const settings = {
+            'string': {
+              'B2': 'TeamBlueGoalsPerGame',
+              'B3': 'TeamBlueShotsPerGame',
+              'B4': 'TeamBlueAssistsPerGame',
+              'B5': 'TeamBlueSavesPerGame',
+              'B6': 'TeamBlueShotPerc',
+              'B7': 'TeamBlueAvgSpeed',
+              'B9': 'TeamBlueTeamname',
+              'B10': 'TeamOrangeGoalsPerGame',
+              'B11': 'TeamOrangeShotsPerGame',
+              'B12': 'TeamOrangeAssistsPerGame',
+              'B13': 'TeamOrangeSavesPerGame',
+              'B14': 'TeamOrangeShotPerc',
+              'B15': 'TeamOrangeAvgSpeed',
+              'B17': 'TeamOrangeTeamname',
+            },
+            "image": {
+              'B8': 'TeamBlueLogoLink',
+              'B16': 'TeamOrangeLogoLink',
+              'B48': 'TeamStatsPNG',
+              'B50': 'TeamStatslPNG',
+              'B51': 'TeamStatsrPNG',
+              'B54': 'TeamStatscPNG',
+            }
+        }
+
+        const spreadsheetID = '1LOvP8cauvyKTEPRLxHfxJgt_idmxrebXRgFH73pmodg';
+        const worksheetName = 'Output';
+        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+        const updateInterval = 3000;
+
+        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
+        u.addOperation('regex', regexOperation);
+        u.startUpdating();
+    </script>
+</body>

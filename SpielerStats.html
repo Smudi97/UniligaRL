@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>RL Team Stats</title>
+    <link rel="stylesheet" href="./SpielerStatsStyle.css">
+
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; ">
+  <img class= "AnimRight" id="SpielerStatsrPNG">
+
+<div class="AnimLeft">
+  <div class="SpielerStatslBox"></div>
+  <div class="SpielerStatslBoxKlein" id="SpielerStatslBoxKlein1"></div>
+  <div class="SpielerStatslBoxKlein" id="SpielerStatslBoxKlein2"></div>
+  <div class="SpielerStatslBoxKlein" id="SpielerStatslBoxKlein3"></div>
+  <img id="SpielerStatslPNG">
+</div>
+
+<div class="AnimRight">
+  <div class="SpielerStatslBox"></div>
+  <div class="SpielerStatslBoxKlein" id="SpielerStatslBoxKlein1"></div>
+  <div class="SpielerStatslBoxKlein" id="SpielerStatslBoxKlein2"></div>
+  <div class="SpielerStatslBoxKlein" id="SpielerStatslBoxKlein3"></div>
+  <img id="SpielerStatslPNG">
+</div>
+
+<div class="TeamNamenTable"> 
+  <table class="TeamNamen">
+    <tr>
+      <td  class= "TeamNamenText AnimLeft" id="TeamBlueTeamname"></td>
+      <td  class= "TeamNamenText" id="SpacerTeams"></td>
+      <td  class= "TeamNamenText AnimRight" id="TeamOrangeTeamname"></td>
+    </tr>
+    <tr>
+      <td  class= "TeamNamenText AnimLeft"><img id="TeamBlueLogoLink"></td>
+      <td  class= "TeamNamenText" id="SpacerTeams"></td>
+      <td  class= "TeamNamenText AnimRight"><img id="TeamOrangeLogoLink"></td>
+    </tr>
+  </div>
+
+<table class="SpielerNamenBlue AnimLeft">
+  <tr>
+    <td class= "SpielerNamenBlueLine" id="TeamBlueSpielerin1Name"></td>
+    <td class= "SpielerNamenBlueLine" id="TeamBlueSpielerin2Name"></td>
+    <td class= "SpielerNamenBlueLine" id="TeamBlueSpielerin3Name"></td>
+  </tr>
+<table class="SpielerNamenOrange AnimRight">
+  <tr>
+    <td class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin1Name"></td>
+    <td class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin2Name"></td>
+    <td class= "SpielerNamenOrangeLine" id="TeamOrangeSpielerin3Name"></td>
+  </tr>
+
+</table>
+    <table class="TeamBlueStats AnimLeft">
+        <tr>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1GoalsPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2GoalsPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3GoalsPerGame"></td>
+        </tr>
+        <tr>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1SavesPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2SavesPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3SavesPerGame"></td>
+        </tr>
+        <tr>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1AssistsPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2AssistsPerGame"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3AssistsPerGame"></td>
+        </tr>
+        <tr>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin1ShotPerc"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin2ShotPerc"></td>
+          <td class= "TeamBlueSpielerinStats" id="TeamBlueSpielerin3ShotPerc"></td>
+        </tr>
+    </table>
+
+    <table class="TeamOrangeStats AnimRight">
+      <tr>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1GoalsPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2GoalsPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3GoalsPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1SavesPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2SavesPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3SavesPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1AssistsPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2AssistsPerGame"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3AssistsPerGame"></td>
+      </tr>
+      <tr>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin1ShotPerc"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin2ShotPerc"></td>
+        <td class= "TeamOrangeSpielerinStats" id="TeamOrangeSpielerin3ShotPerc"></td>
+      </tr>
+  </table>
+
+    <!-- JAVASCRIPT STUFF -->
+    <script src="./Updater.js"></script>
+    <script src="./regex-operation.js"></script>
+    <script>
+        const settings = {
+            'string': {
+              'B9': 'TeamBlueTeamname',
+              'B17': 'TeamOrangeTeamname',
+              'B18': 'TeamBlueSpielerin1GoalsPerGame',
+              'B19': 'TeamBlueSpielerin1SavesPerGame',
+              'B20': 'TeamBlueSpielerin1AssistsPerGame',
+              'B21': 'TeamBlueSpielerin1ShotPerc',
+              'B22': 'TeamBlueSpielerin1Name',
+              'B23': 'TeamBlueSpielerin2GoalsPerGame',
+              'B24': 'TeamBlueSpielerin2SavesPerGame',
+              'B25': 'TeamBlueSpielerin2AssistsPerGame',
+              'B26': 'TeamBlueSpielerin2ShotPerc',
+              'B27': 'TeamBlueSpielerin2Name',
+              'B28': 'TeamBlueSpielerin3GoalsPerGame',
+              'B29': 'TeamBlueSpielerin3SavesPerGame',
+              'B30': 'TeamBlueSpielerin3AssistsPerGame',
+              'B31': 'TeamBlueSpielerin3ShotPerc',
+              'B32': 'TeamBlueSpielerin3Name',
+              'B33': 'TeamOrangeSpielerin1GoalsPerGame',
+              'B34': 'TeamOrangeSpielerin1SavesPerGame',
+              'B35': 'TeamOrangeSpielerin1AssistsPerGame',
+              'B36': 'TeamOrangeSpielerin1ShotPerc',
+              'B37': 'TeamOrangeSpielerin1Name',
+              'B38': 'TeamOrangeSpielerin2GoalsPerGame',
+              'B39': 'TeamOrangeSpielerin2SavesPerGame',
+              'B40': 'TeamOrangeSpielerin2AssistsPerGame',
+              'B41': 'TeamOrangeSpielerin2ShotPerc',
+              'B42': 'TeamOrangeSpielerin2Name',
+              'B43': 'TeamOrangeSpielerin3GoalsPerGame',
+              'B44': 'TeamOrangeSpielerin3SavesPerGame',
+              'B45': 'TeamOrangeSpielerin3AssistsPerGame',
+              'B46': 'TeamOrangeSpielerin3ShotPerc',
+              'B47': 'TeamOrangeSpielerin3Name',
+            },
+            "image": {
+              'B8': 'TeamBlueLogoLink',
+              'B16': 'TeamOrangeLogoLink',
+              'B49': 'SpielerStatsPNG',
+              'B52': 'SpielerStatslPNG',
+              'B53': 'SpielerStatsrPNG',
+            }
+        }
+
+        const spreadsheetID = '1LOvP8cauvyKTEPRLxHfxJgt_idmxrebXRgFH73pmodg';
+        const worksheetName = 'Output';
+        const apiKey = "AIzaSyCpf1Yn1B7b4P9W5sazp6EcfgDM0Ati2Zg";
+        const updateInterval = 3000;
+
+        const u = new GraphicsUpdater(settings, spreadsheetID, worksheetName, apiKey, updateInterval, false);
+        u.addOperation('regex', regexOperation);
+        u.startUpdating();
+    </script>
+</body>

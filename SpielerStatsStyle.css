@@ -1,0 +1,200 @@
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  color: white;
+  src: url('./ZonaPro-Regular.otf');
+}
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  src: url('./ZonaPro-Bold.otf');
+}
+@font-face{
+  font-family: 'Zona Pro';
+  font-style: normal;
+  font-weight: 1000;
+  color: white;
+  src: url('./ZonaPro-ExtraBold.otf');
+}
+
+@keyframes fadeInLeft{
+  0% {opacity:0}
+  70% {opacity:0; transform: translateX(-50px)}
+  100% {opacity:1; transform: translateX(0)}
+}
+
+@keyframes fadeInRight{
+  0% {opacity:0}
+  70% {opacity:0; transform: translateX(50px)}
+  100% {opacity:1; transform: translateX(0)}
+}
+
+.AnimLeft{
+  animation: fadeInLeft 3s ease-in-out;
+}
+
+.AnimRight{
+  animation: fadeInRight 3s ease-in-out;
+}
+
+.SpielerStatslBox{
+  position: absolute;
+  width: 795px;
+  height:500px;
+  top:70px;
+  left:100px;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+.SpielerStatslBoxKlein{
+  position: absolute;
+  width: 256px;
+  height:340px;
+  top:580px;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 8px;
+}
+
+#SpielerStatslBoxKlein1{
+  position: absolute;
+  left:100px;
+}
+
+#SpielerStatslBoxKlein2{
+  position: absolute;
+  left:370px;
+}
+
+#SpielerStatslBoxKlein3{
+  position: absolute;
+  left:640px;
+}
+
+#SpielerStatsrPNG{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width: 1920px;
+  height: 1080px;
+}
+
+#SpielerStatslPNG{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width: 1920px;
+  height: 1080px;
+}
+
+.TeamNamenTable{
+  display: grid;
+  place-items: center;
+}
+
+.TeamNamen{
+  text-transform: uppercase;
+  position:absolute;
+  top: 90px;
+}
+
+.TeamNamenText{
+  font-family: Zona Pro;
+  color: white;
+  font-weight:1000;
+  height: 2em;
+  width: 745px;
+  font-size: 60px;
+  /* outline: solid coral; */
+  text-align: center;
+}
+#SpacerTeams{
+  width:185px;
+}
+
+#TeamBlueLogoLink{
+  max-width: 325px;
+  max-height: 325px;
+  /* outline: solid coral; */
+}
+
+#TeamOrangeLogoLink{
+  max-width: 325px;
+  max-height: 325px;
+  /* outline: solid coral; */
+}
+
+.SpielerNamenBlue{
+  text-transform: uppercase;
+  position:absolute;
+  top:592px;
+  left:86px;
+}
+
+.SpielerNamenBlueLine{
+  font-family: Zona Pro;
+  color: white;
+  font-weight:bold;
+  width: 265px;
+  height: 60px;
+  font-size: 34px;
+  /* outline: solid coral; */
+  text-align: center;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.SpielerNamenOrange{
+  text-transform: uppercase;
+  position:absolute;
+  top:592px;
+  left:1020px;
+}
+
+.SpielerNamenOrangeLine{
+  font-family: Zona Pro;
+  color: white;
+  font-weight:bold;
+  width: 265px;
+  height: 60px;
+  font-size: 34px;
+  /* outline: solid coral; */
+  text-align: center;
+}
+
+.TeamBlueStats{
+  position:absolute;
+  top:648px;
+  left:136px;
+}
+
+.TeamBlueSpielerinStats{
+  font-family: Zona Pro;
+  color: white;
+  width: 266px;
+  height: 60px;
+  font-size: 34px;
+  /* outline: solid coral; */
+  text-align: center;
+}
+
+.TeamOrangeStats{
+  position:absolute;
+  top:648px;
+  left: 1070px;;
+}
+
+.TeamOrangeSpielerinStats{
+  font-family: Zona Pro;
+  color: white;
+  width: 266px;
+  height: 60px;
+  font-size: 34px;
+  /* outline: solid coral; */
+  text-align: center;
+}
